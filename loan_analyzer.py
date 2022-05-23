@@ -109,12 +109,12 @@ print(f"The present value of the loan is {present_value}.")
 #    Else, the present value of the loan is less than the loan cost, then print a message that says that the loan is too expensive and not worth the price.
 # YOUR CODE HERE!
 
-loan_cost = 800
+loan_price = loan.get("loan_price")
 
-if present_value >= loan_cost:
-    print(f"At a price of {loan_cost}, the loan cost is worth at least the cost to buy it.")
+if present_value >= loan_price:
+    print(f"At a price of {loan_price}, the loan cost is worth at least the cost to buy it.")
 else: 
-    print(f"At a price of {loan_cost}, the loan is too expensive and not worth the price.")
+    print(f"At a price of {loan_price}, the loan is too expensive and not worth the price.")
     
 
 """Part 3: Perform Financial Calculations.
