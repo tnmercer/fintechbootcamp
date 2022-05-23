@@ -16,6 +16,9 @@ First, let's start with some calculations on a list of prices for 5 loans.
 """
 loan_costs = [500, 600, 200, 1000, 450]
 
+#Adding header for python output
+print("Part 1: Automate the Calculations")
+
 # How many loans are in the list?
 # @TODO: Use the `len` function to calculate the total number of loans in the list.
 # Print the number of loans from the list
@@ -63,6 +66,9 @@ Using more detailed data on one of these loans, follow these steps to calculate 
     If Present Value represents the loan's fair value (given the required minimum return of 20%), does it make sense to buy the loan at its current cost?
 """
 
+#Header for python output
+print("Part 2: Analyze Loan Data")
+
 # Given the following loan data, you will need to calculate the present value for the loan
 loan = {
     "loan_price": 500,
@@ -75,6 +81,13 @@ loan = {
 # Print each variable.
 # YOUR CODE HERE!
 
+future_value = loan.get("future_value")
+
+remaining_months = loan.get("remaining_months")
+
+print(f"The future value of the loan is {future_value} and there are {remaining_months} months left on the loan.")
+
+
 
 # @TODO: Use the formula for Present Value to calculate a "fair value" of the loan.
 # Use a minimum required return of 20% as the discount rate.
@@ -83,12 +96,26 @@ loan = {
 
 # YOUR CODE HERE!
 
+discount_rate = 0.2
+
+present_value = future_value / (1+discount_rate/12)**remaining_months
+
+print(f"The present value of the loan is {present_value}.")
+
+
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
 # @TODO: Write a conditional statement (an if-else statement) to decide if the present value represents the loan's fair value.
 #    If the present value of the loan is greater than or equal to the cost, then print a message that says the loan is worth at least the cost to buy it.
 #    Else, the present value of the loan is less than the loan cost, then print a message that says that the loan is too expensive and not worth the price.
 # YOUR CODE HERE!
 
+loan_cost = 800
+
+if present_value >= loan_cost:
+    print(f"At a price of {loan_cost}, the loan cost is worth at least the cost to buy it.")
+else: 
+    print(f"At a price of {loan_cost}, the loan is too expensive and not worth the price.")
+    
 
 """Part 3: Perform Financial Calculations.
 
