@@ -2,7 +2,7 @@
 import csv
 from pathlib import Path
 
-from numpy import number
+from numpy import append, number
 
 """Part 1: Automate the Calculations.
 
@@ -199,15 +199,26 @@ loans = [
     },
 ]
 
+#header for python output
+print("Part 4: Conditionally Filter List of Loans")
+
 # @TODO: Create an empty list called `inexpensive_loans`
 # YOUR CODE HERE!
+
+inexpensive_loans = []
+
 
 # @TODO: Loop through all the loans and append any that cost $500 or less to the `inexpensive_loans` list
 # YOUR CODE HERE!
 
+for loans in loans:
+    if loans["loan_price"] <= 500:
+        inexpensive_loans.append(loans)
+
+
 # @TODO: Print the `inexpensive_loans` list
 # YOUR CODE HERE!
-
+print(inexpensive_loans)
 
 """Part 5: Save the results.
 
