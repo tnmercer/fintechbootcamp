@@ -112,6 +112,42 @@ def save_qualifying_loans(qualifying_loans):
     # YOUR CODE HERE!
 
 
+def save_csv():
+
+
+    #As a user, I need the ability to save the qualifying loans to a CSV file so that I can share the results as a spreadsheet.
+
+    #Given that I’m using the loan qualifier CLI, when I run the qualifier, then the tool should prompt the user to save the results as a CSV file.
+
+    #Given that I have a list of qualifying loans, when I’m prompted to save the results, then I should be able to opt out of saving the file.
+
+    if len(find_qualifying_loans) > 0:
+        save_decision = questionary.confirm("Save a copy of the qualifying loans to a csv file?").ask()
+
+    #Given that I have a list of qualifying loans, when I choose to save the loans, the tool should prompt for a file path to save the file.
+
+        if save_decision:
+            save_path = questionary.path("Enter a file path to save your csv file")
+            save_path = Path(save_path)
+
+    #Given that I’m using the loan qualifier CLI, when I choose to save the loans, then the tool should save the results as a CSV file.
+
+            with open(save_path, 'w', newline='') as csvfile:
+                csvwriter = csv.writer(csvfile)
+
+                #write header row to CSV file
+                csvwriter.writerow(header)
+    
+                #add each loan in qualifying loans list to CSV
+                for loan in find_qualifying_loans:
+                    csvwriter.writerow(loan.values())
+
+    #Given that no qualifying loans exist, when prompting a user to save a file, then the program should notify the user and exit.
+
+    else:
+        sys.exit("There are currently no qualifying loans.")
+
+
 def run():
     """The main function for running the script."""
 
