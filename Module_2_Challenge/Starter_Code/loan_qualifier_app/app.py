@@ -7,6 +7,7 @@ Example:
     $ python app.py
 """
 import sys
+import csv
 import fire
 import questionary
 from pathlib import Path
@@ -112,7 +113,7 @@ def save_qualifying_loans(qualifying_loans):
     # YOUR CODE HERE!
 
 
-def save_csv():
+def save_csv(qualifying_loans):
 
 
     #As a user, I need the ability to save the qualifying loans to a CSV file so that I can share the results as a spreadsheet.
@@ -121,13 +122,13 @@ def save_csv():
 
     #Given that I have a list of qualifying loans, when I’m prompted to save the results, then I should be able to opt out of saving the file.
 
-    if len(find_qualifying_loans) > 0:
+    if len(qualifying_loans) > 0:
         save_decision = questionary.confirm("Save a copy of the qualifying loans to a csv file?").ask()
 
     #Given that I have a list of qualifying loans, when I choose to save the loans, the tool should prompt for a file path to save the file.
 
         if save_decision:
-            save_path = questionary.path("Enter a file path to save your csv file")
+            save_path = questionary.text("Enter a file path to save your csv file").ask()
             save_path = Path(save_path)
 
     #Given that I’m using the loan qualifier CLI, when I choose to save the loans, then the tool should save the results as a CSV file.
@@ -136,7 +137,7 @@ def save_csv():
                 csvwriter = csv.writer(csvfile)
 
                 #write header row to CSV file
-                csvwriter.writerow(header)
+                #csvwriter.writerow(header)
     
                 #add each loan in qualifying loans list to CSV
                 for loan in find_qualifying_loans:
@@ -161,6 +162,9 @@ def run():
     qualifying_loans = find_qualifying_loans(
         bank_data, credit_score, debt, income, loan_amount, home_value
     )
+
+    #pull CSV function into main function for testing
+    save_csv(qualifying_loans)
 
     # Save qualifying loans
     save_qualifying_loans(qualifying_loans)
