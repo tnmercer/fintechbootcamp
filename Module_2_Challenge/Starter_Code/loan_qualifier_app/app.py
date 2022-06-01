@@ -112,10 +112,6 @@ def save_qualifying_loans(qualifying_loans):
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
 
-
-def save_csv(qualifying_loans):
-
-
     #As a user, I need the ability to save the qualifying loans to a CSV file so that I can share the results as a spreadsheet.
 
     #Given that I’m using the loan qualifier CLI, when I run the qualifier, then the tool should prompt the user to save the results as a CSV file.
@@ -133,21 +129,29 @@ def save_csv(qualifying_loans):
 
     #Given that I’m using the loan qualifier CLI, when I choose to save the loans, then the tool should save the results as a CSV file.
 
-            with open(save_path, 'w', newline='') as csvfile:
-                csvwriter = csv.writer(csvfile)
-
-                #write header row to CSV file
-                #csvwriter.writerow(header)
-    
-                #add each loan in qualifying loans list to CSV
-                for loan in find_qualifying_loans:
-                    csvwriter.writerow(loan.values())
+            save_csv(qualifying_loans)
 
     #Given that no qualifying loans exist, when prompting a user to save a file, then the program should notify the user and exit.
 
     else:
         sys.exit("There are currently no qualifying loans.")
 
+def save_csv(qualifying_loans):
+
+    save_path = "testfile.csv"
+    save_path = Path(save_path)
+    
+    header = "Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"
+
+    with open(save_path, 'w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+
+        #write header row to CSV file
+        csvwriter.writerow(header)
+    
+        #add each loan in qualifying loans list to CSV
+        for loan in qualifying_loans:
+            csvwriter.writerow(loan)
 
 def run():
     """The main function for running the script."""
@@ -162,13 +166,12 @@ def run():
     qualifying_loans = find_qualifying_loans(
         bank_data, credit_score, debt, income, loan_amount, home_value
     )
-
-    #pull CSV function into main function for testing
+    
+    #save CSV
     save_csv(qualifying_loans)
 
     # Save qualifying loans
-    save_qualifying_loans(qualifying_loans)
-
-
+    #save_qualifying_loans(qualifying_loans)
+  
 if __name__ == "__main__":
     fire.Fire(run)
