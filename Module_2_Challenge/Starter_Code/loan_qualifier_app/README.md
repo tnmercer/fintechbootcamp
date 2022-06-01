@@ -1,6 +1,8 @@
-# Project Title
+# Loan Analyzer
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+Loan Analyzer is an interactive app used to filter qualifying bank loans and save them to a new CSV file.
+
+The app reads data from a CSV file of available loans, filters based on user criteria and provides a list of qualifying loans with the option to save to a CSV.
 
 ---
 
@@ -8,26 +10,41 @@ Just after the title, introduce your project by describing attractively what the
 
 Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
 
+This app is built using Python 3.7 with the following packages: 
+
+* [Fire](https://github.com/google/python-fire) to create a command line interface (CLI) 
+* [Questionary](https://github.com/tmbo/questionary) to allow the user to interact with the app and provide inputs through the CLI
+
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Before using the app, run the following commands to install Fire and Questionary.
+
+```
+pip install fire
+pip install questionary
+```
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+To use the app, clone the repository and run app.py.
+
+```python app.py```
+
+Add screenshots of the terminal input messages
+
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+This app was built by [Toni Mercer](https://www.linkedin.com/in/toni-mercer-b9bab2101/) using the Starter Code from the UW FinTech Bootcamp course notes. 
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+MIT
