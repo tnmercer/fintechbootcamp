@@ -41,7 +41,7 @@ Add screenshots of the terminal input messages
 
 ## Contributors
 
-This app was built by [Toni Mercer](https://www.linkedin.com/in/toni-mercer-b9bab2101/) using the Starter Code from the UW FinTech Bootcamp course notes. 
+This app was built by [Toni Mercer](https://www.linkedin.com/in/toni-mercer/) using the Starter Code from the UW FinTech Bootcamp course notes. 
 
 ---
 

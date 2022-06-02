@@ -5,7 +5,7 @@ This contains a helper function for loading and saving CSV files.
 
 """
 import csv
-
+from pathlib import Path
 
 def load_csv(csvpath):
     """Reads the CSV file from path provided.
@@ -30,7 +30,7 @@ def load_csv(csvpath):
     return data
 
 
-def save_csv(qualifying_loans):
+def save_csv(qualifying_loans, save_path):
     """Qualifying loans from find_qualifying_loans function.
 
     Args:
@@ -39,7 +39,7 @@ def save_csv(qualifying_loans):
     Returns:
         A CSV file with qualifying loans in rows."""
 
-    save_path = "testfile.csv"
+    #save_path = "testfile.csv"
     save_path = Path(save_path)
     
     header = "Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"

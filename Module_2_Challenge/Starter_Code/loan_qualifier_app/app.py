@@ -131,7 +131,10 @@ def save_qualifying_loans(qualifying_loans):
 
     #Given that I’m using the loan qualifier CLI, when I choose to save the loans, then the tool should save the results as a CSV file.
 
-            save_csv(qualifying_loans)
+            save_csv(qualifying_loans, save_path)
+        
+        else:
+            sys.exit("You have chosen not to save the CSV file.")
 
     #Given that no qualifying loans exist, when prompting a user to save a file, then the program should notify the user and exit.
 
@@ -154,10 +157,10 @@ def run():
     )
     
     #save CSV
-    save_csv(qualifying_loans)
+    #save_csv(qualifying_loans)
 
     # Save qualifying loans
-    #save_qualifying_loans(qualifying_loans)
+    save_qualifying_loans(qualifying_loans)
   
 if __name__ == "__main__":
     fire.Fire(run)
