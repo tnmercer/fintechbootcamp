@@ -8,8 +8,6 @@ The app reads data from a CSV file of available loans, filters based on user cri
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
-
 This app is built using Python 3.7 with the following packages: 
 
 * [Fire](https://github.com/google/python-fire) to create a command line interface (CLI) 
@@ -34,8 +32,9 @@ To use the app, clone the repository and run app.py.
 
 ```python app.py```
 
-Add screenshots of the terminal input messages
+The CLI will run through various questions to collect data and confirm whether a CSV output is required. The screenshot below shows the questions and some example responses.
 
+![CLI screenshot example of questions and answers.](images/terminal_screenshot.png)
 
 ---
 
