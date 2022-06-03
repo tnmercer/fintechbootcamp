@@ -1,4 +1,4 @@
-# Loan Analyzer
+![Qualified checklist](images/qualified_image.png)
 
 Loan Analyzer is an interactive app used to filter qualifying bank loans and save them to a new CSV file.
 

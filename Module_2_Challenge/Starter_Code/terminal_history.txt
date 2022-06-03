@@ -1,0 +1,50 @@
+  342  ls
+  343  cd loan_qualifier_app/
+  344  python app.py 
+  345  git status
+  346  git add qualifier/utils.fileio.py
+  347  git add qualifier/utils/fileio.py
+  348  git status
+  349  git add testfile.csv
+  350  git commit -m "modularised save_csv - tested"
+  351  git push
+  352  cd ..
+  353  git status
+  354  git status
+  355  cd loan_qualifier_app/
+  356  git status
+  357  git add app.py
+  358  git status
+  359  git commit -m "save_csv modular in app"
+  360  git push
+  361  python --version
+  362  git status
+  363  git add readme.md
+  364  git status
+  365  git commit -m "Readme updates"
+  366  git add README.md 
+  367  git status
+  368  git push
+  369  git status
+  370  git commit -m "README.md updated"
+  371  git push
+  372  pwd
+  373  clear
+  374  ls
+  375  python app.py 
+  376  clear
+  377  python app.py 
+  378  cd ..
+  379  cd ..
+  380  git status
+  381  cd Starter_Code/
+  382  git add -A
+  383  git status
+  384  git commit -m "User inputs tested and connected modular function"
+  385  git push
+  386  git commit -m "updated readme"
+  387  git add -a
+  388  git add -A
+  389  git commit -m "updated readme"
+  390  git push
+  391  history 50 > terminal_history.txt

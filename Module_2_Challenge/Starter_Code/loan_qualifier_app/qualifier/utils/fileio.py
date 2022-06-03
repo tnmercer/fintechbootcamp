@@ -34,12 +34,12 @@ def save_csv(qualifying_loans, save_path):
     """Qualifying loans from find_qualifying_loans function.
 
     Args:
-        save_path: The csv destination file path. Currently static - replace with variable!
+        save_path: The csv destination file path.
+        If running from the main function, the arguments will be return values from save_qualifiying_loans(). 
 
     Returns:
-        A CSV file with qualifying loans in rows."""
+        A CSV file of qualifying loans."""
 
-    #save_path = "testfile.csv"
     save_path = Path(save_path)
     
     header = "Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"

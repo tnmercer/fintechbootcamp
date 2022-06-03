@@ -115,11 +115,10 @@ def save_qualifying_loans(qualifying_loans):
     # YOUR CODE HERE!
 
     #As a user, I need the ability to save the qualifying loans to a CSV file so that I can share the results as a spreadsheet.
-
     #Given that I’m using the loan qualifier CLI, when I run the qualifier, then the tool should prompt the user to save the results as a CSV file.
-
     #Given that I have a list of qualifying loans, when I’m prompted to save the results, then I should be able to opt out of saving the file.
 
+    #If there are any qualifying loans, confirm if a CSV should be saved.
     if len(qualifying_loans) > 0:
         save_decision = questionary.confirm("Save a copy of the qualifying loans to a csv file?").ask()
 
@@ -156,9 +155,6 @@ def run():
         bank_data, credit_score, debt, income, loan_amount, home_value
     )
     
-    #save CSV
-    #save_csv(qualifying_loans)
-
     # Save qualifying loans
     save_qualifying_loans(qualifying_loans)
   
