@@ -34,7 +34,7 @@ To use the app, clone the repository and run app.py.
 
 The CLI will run through various questions to collect data and confirm whether a CSV output is required. The screenshot below shows the questions and some example responses.
 
-![CLI screenshot example of questions and answers.](images/terminal_screenshot.png)
+![CLI screenshot example of questions and answers.](images/Terminal_Screenshot.png)
 
 ---
 
