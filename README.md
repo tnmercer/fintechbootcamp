@@ -9,6 +9,6 @@ Loan Analyzer calculations
 
 Loan Analyzer with user interaction and CSV file output option
 
-##Module 3 Challenge
+## Module 3 Challenge
 
 Bitcoin Financial Analysis using Pandas and Jupyter
