@@ -27,7 +27,8 @@ Open the notebook:
 
 To change the dates of analysis, modify the dates in the following places:
 
-```date_from_early = datetime.date(2018,1,1)
+```
+date_from_early = datetime.date(2018,1,1)
 date_to_early = datetime.date(2018,1,31)
 
 date_from_late = datetime.date(2018,3,1)
@@ -37,7 +38,8 @@ early_date = datetime.date(2018,1,10)
 
 middle_date = datetime.date(2018,2,2
 
-late_date = datetime.date(2018,3,7)```
+late_date = datetime.date(2018,3,7)
+```
 
 Re-run the notebook to update all charts and dataframes.
 
