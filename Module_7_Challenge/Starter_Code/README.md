@@ -8,10 +8,13 @@ The analyzer queries the database using SQL and displays content in dataframes a
 
 Built using Python 3.7 with the following libraries:
 
--[Pandas](https://github.com/pandas-dev/pandas) to make calculating statistics a breeze, and to add charts and tables for visual data.
--[hvplot](https://github.com/holoviz/hvplot) for plotting interactive charts.
--[SQLalchemy](https://www.sqlalchemy.org/) for querying the database.
--[Voila](https://voila.readthedocs.io/en/stable/index.html) to deploy the Jupyter Notebook as a web application.
+- [Pandas](https://github.com/pandas-dev/pandas) to make calculating statistics a breeze, and to add charts and tables for visual data.
+
+- [hvplot](https://github.com/holoviz/hvplot) for plotting interactive charts.
+
+- [SQLalchemy](https://www.sqlalchemy.org/) for querying the database.
+
+- [Voila](https://voila.readthedocs.io/en/stable/index.html) to deploy the Jupyter Notebook as a web application.
 
 ## Installation Guide
 
